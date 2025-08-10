@@ -208,7 +208,7 @@ export default function Home() {
 
         <div
           ref={(el) => (elementsRef.current[1] = el)}
-          className="absolute w-screen lg:w-fit lg:left-12 justify-items-center lg:justify-items-start top-5 lg:top-20 z-30 transition-transform duration-300 ease-out"
+          className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-30 transition-transform duration-300 ease-out"
         >
           <Image
             src="/logo.svg"
@@ -480,7 +480,7 @@ export default function Home() {
         </div>
 
         {/* Нижняя панель */}
-        <div className="absolute w-screen lg:w-fit  lg:left-10 bottom-3 justify-items-center lg:justify-items-start z-20 text-xs">
+        <div className="absolute w-screen lg:w-fit  lg:left-10 bottom-3 flex justify-center lg:justify-start z-20 text-xs">
           <p>© AurumX Labs, 2025</p>
         </div>
 
