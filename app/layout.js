@@ -12,7 +12,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "AURUM",
+  title: "AURUM X",
   description: "AURUM — Locked. Listed. Liquid.",
 };
 
