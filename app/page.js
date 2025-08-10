@@ -189,7 +189,7 @@ export default function Home() {
 
         <div
             ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[200%] translate-y-[190%] flex lg:hidden  group hover:scale-110 lg:relative  transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
+            className="translate-x-[250%] translate-y-[190%] flex lg:hidden  group hover:scale-110 lg:relative  transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
           >
             <div onClick={() => setIsModalOpen(true)} className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out">
             GO TO APP
@@ -268,7 +268,7 @@ export default function Home() {
           </div>
           <div
             ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[-20%] translate-y-[100%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
+            className="translate-x-[-20%] translate-y-[150%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
           >
             <a
               href="https://t.me/AurumXLabs"
