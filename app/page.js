@@ -208,10 +208,10 @@ export default function Home() {
 
         <div
           ref={(el) => (elementsRef.current[1] = el)}
-          className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-30 transition-transform duration-300 ease-out"
+          className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-[100] transition-transform duration-300 ease-out"
         >
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="Aurum logo"
             width={239}
             height={35}
@@ -222,7 +222,7 @@ export default function Home() {
         </div>
         <div
           ref={(el) => (elementsRef.current[2] = el)}
-          className="absolute pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-20 animate-fade-in transition-transform duration-300 ease-out"
+          className="absolute pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
         >
           <Image
             src="/grid.svg"
@@ -231,13 +231,13 @@ export default function Home() {
             height={900}
             objectFit="cover"
             priority
-            className="h-1/2 w-fit lg:h-full"
+            className="h-1/2 w-fit sm:h-full"
           />
         </div>
         <section className="w-full flex items-center justify-center z-0 h-[80vh] lg:h-screen">
           <div
             ref={(el) => (elementsRef.current[3] = el)}
-            className="z-10 absolute text-xl lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
+            className="z-10 absolute text-2xl font-semibold lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
           >
             <h2 className="-translate-x-5 lg:-translate-x-20">Locked.</h2>
             <h2>Listed.</h2>
@@ -268,7 +268,7 @@ export default function Home() {
           </div>
           <div
             ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[-20%] translate-y-[150%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
+            className="translate-x-[-20%] translate-y-[120%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
           >
             <a
               href="https://t.me/AurumXLabs"
@@ -323,12 +323,12 @@ export default function Home() {
 
         <div
           ref={(el) => (elementsRef.current[7] = el)}
-          className="absolute flex flex-col right-4 lg:right-14 bottom-14 lg:bottom-10 z-30 transition-transform duration-300 ease-out"
+          className="absolute flex flex-col right-4 lg:right-14 pl-4 bottom-14 w-full md:w-fit lg:bottom-10 z-30 transition-transform duration-300 ease-out"
         >
-          <aside className="grid lg:hidden grid-cols-4 gap-2 w-fit">
+          <aside className="grid md:hidden grid-cols-4 gap-2 w-full">
             {mobileArr.map((el, idx) =>
               el.num === 0 ? (
-                <div key={idx} className="pointer-events-none"></div>
+                <div key={idx} className="pointer-events-none  aspect-square"></div>
               ) : el.link ? (
                 <a
                   href={el.link}
@@ -337,7 +337,7 @@ export default function Home() {
                   key={idx}
                   className={`${
                     el.isBlured ? "" : "cursor-pointer"
-                  } w-16 lg:w-24 h-16 lg:h-24 rounded-xl backdrop-blur-2xl bg-black/10 flex flex-col items-center justify-center text-white/80 hover:scale-105 transition-all duration-300 ease-out`}
+                  } aspect-square w-full rounded-xl backdrop-blur-2xl bg-black/10 flex flex-col items-center justify-center text-white/80 hover:scale-105 transition-all duration-300 ease-out`}
                 >
                   <Image
                     src="/border.svg"
@@ -367,7 +367,7 @@ export default function Home() {
                   key={idx}
                   className={`${
                     el.isBlured ? "" : "cursor-pointer"
-                  } w-16 lg:w-24 h-16 lg:h-24 rounded-xl backdrop-blur-2xl bg-black/10 flex flex-col items-center justify-center text-white/80 hover:scale-105 transition-all duration-300 ease-out`}
+                  } aspect-square  w-full rounded-xl backdrop-blur-2xl bg-black/10 flex flex-col items-center justify-center text-white/80 hover:scale-105 transition-all duration-300 ease-out`}
                 >
                   <Image
                     src="/border.svg"
@@ -395,7 +395,7 @@ export default function Home() {
               )
             )}
           </aside>
-          <aside className="hidden lg:grid grid-cols-5 gap-4 w-fit">
+          <aside className="hidden md:grid grid-cols-5 gap-4 w-fit">
             {arr.map((el, idx) =>
               el.num === 0 ? (
                 <div key={idx}></div>
