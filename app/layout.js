@@ -13,7 +13,7 @@ const manrope = Manrope({
 
 export const metadata = {
   title: "AURUM X",
-  description: "AURUM — Locked. Listed. Liquid.",
+  description: "AurumX | Locked. Listed. Liquid.",
 };
 
 export default function RootLayout({ children }) {

@@ -39,7 +39,7 @@ export default function Home() {
         />
       ),
       isBlured: false,
-      link: "https://medium.com/AurumXLabs",
+      link: "https://medium.com/@AurumXLabs/decentralized-gold-in-defi-137f6a7cffd8",
     },
     {
       sym: (
@@ -95,7 +95,7 @@ export default function Home() {
         />
       ),
       isBlured: false,
-      link: "https://medium.com/AurumXLabs",
+      link: "https://medium.com/@AurumXLabs/decentralized-gold-in-defi-137f6a7cffd8",
     },
     {
       sym: (
