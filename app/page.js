@@ -179,7 +179,7 @@ export default function Home() {
         </div>
 
         <div className="h-[80vh]  lg:h-full">
-          <div className="absolute top-6 right-6 z-40  hidden lg:flex">
+          <div className="absolute top-6 right-6 z-40 hidden lg:flex">
             <div
               onClick={() => setIsModalOpen(true)}
               className="cursor-pointer hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
@@ -187,31 +187,12 @@ export default function Home() {
               GO TO APP
             </div>
           </div>
-
-          <div
-            ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[250%] translate-y-[190%] flex lg:hidden  group hover:scale-110 lg:relative  transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
-          >
-            <div
-              onClick={() => setIsModalOpen(true)}
-              className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
-            >
-              GO TO APP
-            </div>
-            <Image
-              src="/mobile/app.svg"
-              alt="Aurum background"
-              width={100}
-              height={49}
-              objectFit="cover"
-              priority
-              className="w-24"
-            />
-          </div>
+          
+            
 
           <div
             ref={(el) => (elementsRef.current[1] = el)}
-            className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-[100] transition-transform duration-300 ease-out"
+            className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-8 lg:top-20 z-[100] transition-transform duration-300 ease-out"
           >
             <Image
               src="/logo.png"
@@ -225,7 +206,7 @@ export default function Home() {
           </div>
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="absolute pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
+            className="absolute hidden lg:flex pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
           >
             <Image
               src="/grid.svg"
@@ -237,7 +218,7 @@ export default function Home() {
               className="h-1/2 w-fit sm:h-full"
             />
           </div>
-          <section className="w-full flex items-center justify-center z-0 h-[80vh] lg:h-screen">
+          <section className="w-full relative flex items-center max-w-[380px] justify-self-center lg:max-w-none justify-center z-0 h-[80vh] lg:h-screen">
             <div
               ref={(el) => (elementsRef.current[3] = el)}
               className="z-10 absolute text-2xl font-semibold lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
@@ -246,6 +227,20 @@ export default function Home() {
               <h2>Listed.</h2>
               <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
             </div>
+           <div
+            ref={(el) => (elementsRef.current[2] = el)}
+            className="absolute flex lg:hidden  max-[312]:left-5 max-[400]:left-10 left-0 pointer-events-none py-10 h-[80vh] items-center  w-fit z-[99] animate-fade-in transition-transform duration-300 ease-out"
+          >
+            <Image
+              src="/grid.svg"
+              alt="Aurum grid"
+              width={300}
+              height={900}
+              objectFit="cover"
+              priority
+              className="h-[58%] w-fit "
+            />
+          </div>
 
             <div
               ref={(el) => (elementsRef.current[4] = el)}
@@ -269,9 +264,30 @@ export default function Home() {
                 className="w-44"
               />
             </div>
+
             <div
               ref={(el) => (elementsRef.current[4] = el)}
-              className="translate-x-[-20%] translate-y-[120%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
+              className="right-8 top-25 flex lg:hidden group hover:scale-110 lg:relative transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
+            >
+              <div
+                onClick={() => setIsModalOpen(true)}
+                className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
+              >
+                GO TO APP
+              </div>
+              <Image
+                src="/mobile/app.svg"
+                alt="Aurum background"
+                width={100}
+                height={49}
+                objectFit="cover"
+                priority
+                className="w-24"
+              />
+            </div>
+            <div
+              ref={(el) => (elementsRef.current[4] = el)}
+              className="translate-x-[-15%] translate-y-[110%] min-[380]:translate-y-[130%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
             >
               <a
                 href="https://t.me/AurumXLabs"
@@ -326,9 +342,9 @@ export default function Home() {
 
         <div
           ref={(el) => (elementsRef.current[7] = el)}
-          className="absolute flex flex-col right-4 lg:right-14 pl-4 bottom-14 w-full md:w-fit lg:bottom-10 z-30 transition-transform duration-300 ease-out"
+          className="absolute flex items-center flex-col right-4 lg:right-14 pl-4 bottom-14 w-[calc(100%-1rem)] md:w-fit lg:bottom-10 z-30 transition-transform duration-300 ease-out"
         >
-          <aside className="grid md:hidden grid-cols-4 gap-2 w-full">
+          <aside className="grid md:hidden grid-cols-4 gap-2 w-full max-w-[283px] min-[380]:max-w-[498px] ">
             {mobileArr.map((el, idx) =>
               el.num === 0 ? (
                 <div
