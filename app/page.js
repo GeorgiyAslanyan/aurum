@@ -221,26 +221,13 @@ export default function Home() {
           <section className="w-full relative flex items-center max-w-[380px] justify-self-center lg:max-w-none justify-center z-0 h-[80vh] lg:h-screen">
             <div
               ref={(el) => (elementsRef.current[3] = el)}
-              className="z-10 absolute text-2xl font-semibold lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
+              className="z-10 absolute text-2xl font-semibold lg:text-6xl hidden lg:flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
             >
               <h2 className="-translate-x-5 lg:-translate-x-20">Locked.</h2>
               <h2>Listed.</h2>
               <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
             </div>
-           <div
-            ref={(el) => (elementsRef.current[2] = el)}
-            className="absolute flex lg:hidden  max-[312]:left-5 max-[400]:left-10 left-0 pointer-events-none py-10 h-[80vh] items-center  w-fit z-[99] animate-fade-in transition-transform duration-300 ease-out"
-          >
-            <Image
-              src="/grid.svg"
-              alt="Aurum grid"
-              width={300}
-              height={900}
-              objectFit="cover"
-              priority
-              className="h-[58%] w-fit "
-            />
-          </div>
+           
 
             <div
               ref={(el) => (elementsRef.current[4] = el)}
@@ -310,6 +297,21 @@ export default function Home() {
 
             <div
               ref={(el) => (elementsRef.current[5] = el)}
+              className="pointer-events-none absolute transition-transform duration-300 ease-out lg:hidden z-50"
+            >
+              <Image
+                src="/mobile/rect.png"
+                alt="Aurum rect"
+                width={1080}
+                height={1080}
+                objectFit="cover"
+                priority
+                className="w-full translate-y-[-10%] lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
+              />
+            </div>
+
+            <div
+              ref={(el) => (elementsRef.current[5] = el)}
               className="pointer-events-none absolute transition-transform duration-300 ease-out"
             >
               <Image
@@ -319,7 +321,7 @@ export default function Home() {
                 height={1080}
                 objectFit="cover"
                 priority
-                className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
+                className="h-[40vh] translate-y-[-10%] hidden lg:flex lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
               />
             </div>
 
@@ -334,7 +336,7 @@ export default function Home() {
                 height={1080}
                 objectFit="cover"
                 priority
-                className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh]"
+                className="h-[40vh] translate-y-[-10%]  hidden lg:flex lg:translate-y-0 lg:h-[90vh]"
               />
             </div>
           </section>
