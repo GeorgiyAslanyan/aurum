@@ -6,8 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const arr = [
     { num: 0, sym: "", isBlured: true },
@@ -167,7 +166,7 @@ export default function Home() {
       >
         <div
           ref={(el) => (elementsRef.current[0] = el)}
-          className="absolute w-full h-full pointer-events-none " 
+          className="absolute w-full h-full pointer-events-none "
         >
           <Image
             src="/background.svg"
@@ -181,19 +180,24 @@ export default function Home() {
 
         <div className="h-[80vh]  lg:h-full">
           <div className="absolute top-6 right-6 z-40  hidden lg:flex">
-          <div onClick={() => setIsModalOpen(true)} className="cursor-pointer hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out">
-            GO TO APP
+            <div
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
+            >
+              GO TO APP
+            </div>
           </div>
-        </div>
 
-
-        <div
+          <div
             ref={(el) => (elementsRef.current[4] = el)}
             className="translate-x-[250%] translate-y-[190%] flex lg:hidden  group hover:scale-110 lg:relative  transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
           >
-            <div onClick={() => setIsModalOpen(true)} className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out">
-            GO TO APP
-          </div>
+            <div
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
+            >
+              GO TO APP
+            </div>
             <Image
               src="/mobile/app.svg"
               alt="Aurum background"
@@ -204,121 +208,120 @@ export default function Home() {
               className="w-24"
             />
           </div>
-        
 
-        <div
-          ref={(el) => (elementsRef.current[1] = el)}
-          className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-[100] transition-transform duration-300 ease-out"
-        >
-          <Image
-            src="/logo.png"
-            alt="Aurum logo"
-            width={239}
-            height={35}
-            objectFit="cover"
-            priority
-            className="h-full w-[150px] lg:w-[239px]"
-          />
-        </div>
-        <div
-          ref={(el) => (elementsRef.current[2] = el)}
-          className="absolute pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
-        >
-          <Image
-            src="/grid.svg"
-            alt="Aurum grid"
-            width={300}
-            height={900}
-            objectFit="cover"
-            priority
-            className="h-1/2 w-fit sm:h-full"
-          />
-        </div>
-        <section className="w-full flex items-center justify-center z-0 h-[80vh] lg:h-screen">
           <div
-            ref={(el) => (elementsRef.current[3] = el)}
-            className="z-10 absolute text-2xl font-semibold lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
+            ref={(el) => (elementsRef.current[1] = el)}
+            className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-5 lg:top-20 z-[100] transition-transform duration-300 ease-out"
           >
-            <h2 className="-translate-x-5 lg:-translate-x-20">Locked.</h2>
-            <h2>Listed.</h2>
-            <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
+            <Image
+              src="/logo.png"
+              alt="Aurum logo"
+              width={239}
+              height={35}
+              objectFit="cover"
+              priority
+              className="h-full w-[150px] lg:w-[239px]"
+            />
           </div>
-
           <div
-            ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[190%] hidden lg:flex  group hover:scale-110 relative  transition-all translate-y-[-190%] z-10 items-center justify-center  duration-300 ease-out"
+            ref={(el) => (elementsRef.current[2] = el)}
+            className="absolute pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
           >
-            <a
-              href="https://t.me/AurumXLabs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute text-xl transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+            <Image
+              src="/grid.svg"
+              alt="Aurum grid"
+              width={300}
+              height={900}
+              objectFit="cover"
+              priority
+              className="h-1/2 w-fit sm:h-full"
+            />
+          </div>
+          <section className="w-full flex items-center justify-center z-0 h-[80vh] lg:h-screen">
+            <div
+              ref={(el) => (elementsRef.current[3] = el)}
+              className="z-10 absolute text-2xl font-semibold lg:text-6xl flex translate-x-10 lg:translate-x-0 flex-col gap-1 translate-y-[-30%] lg:translate-y-0 lg:gap-5 transition-transform duration-300 ease-out"
             >
-              JOIN US
-            </a>
-            <Image
-              src="/join.svg"
-              alt="Aurum background"
-              width={273}
-              height={154}
-              objectFit="cover"
-              priority
-              className="w-44"
-            />
-          </div>
-          <div
-            ref={(el) => (elementsRef.current[4] = el)}
-            className="translate-x-[-20%] translate-y-[120%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
-          >
-            <a
-              href="https://t.me/AurumXLabs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute text-xl bottom-2 right-2 transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+              <h2 className="-translate-x-5 lg:-translate-x-20">Locked.</h2>
+              <h2>Listed.</h2>
+              <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
+            </div>
+
+            <div
+              ref={(el) => (elementsRef.current[4] = el)}
+              className="translate-x-[190%] hidden lg:flex  group hover:scale-110 relative  transition-all translate-y-[-190%] z-10 items-center justify-center  duration-300 ease-out"
             >
-              JOIN US
-            </a>
-            <Image
-              src="/mobile/join.svg"
-              alt="Aurum background"
-              width={212}
-              height={130}
-              objectFit="cover"
-              priority
-              className="w-44"
-            />
-          </div>
+              <a
+                href="https://t.me/AurumXLabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute text-xl transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+              >
+                JOIN US
+              </a>
+              <Image
+                src="/join.svg"
+                alt="Aurum background"
+                width={273}
+                height={154}
+                objectFit="cover"
+                priority
+                className="w-44"
+              />
+            </div>
+            <div
+              ref={(el) => (elementsRef.current[4] = el)}
+              className="translate-x-[-20%] translate-y-[120%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
+            >
+              <a
+                href="https://t.me/AurumXLabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute text-xl bottom-2 right-2 transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+              >
+                JOIN US
+              </a>
+              <Image
+                src="/mobile/join.svg"
+                alt="Aurum background"
+                width={212}
+                height={130}
+                objectFit="cover"
+                priority
+                className="w-44"
+              />
+            </div>
 
-          <div
-            ref={(el) => (elementsRef.current[5] = el)}
-            className="pointer-events-none absolute transition-transform duration-300 ease-out"
-          >
-            <Image
-              src="/rect.svg"
-              alt="Aurum background"
-              width={1080}
-              height={1080}
-              objectFit="cover"
-              priority
-              className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
-            />
-          </div>
+            <div
+              ref={(el) => (elementsRef.current[5] = el)}
+              className="pointer-events-none absolute transition-transform duration-300 ease-out"
+            >
+              <Image
+                src="/rect.svg"
+                alt="Aurum background"
+                width={1080}
+                height={1080}
+                objectFit="cover"
+                priority
+                className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
+              />
+            </div>
 
-          <div
-            ref={(el) => (elementsRef.current[6] = el)}
-            className="pointer-events-none absolute transition-transform duration-300 ease-out"
-          >
-            <Image
-              src="/borderRectangle.svg"
-              alt="Aurum background"
-              width={1080}
-              height={1080}
-              objectFit="cover"
-              priority
-              className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh]"
-            />
-          </div>
-        </section>
+            <div
+              ref={(el) => (elementsRef.current[6] = el)}
+              className="pointer-events-none absolute transition-transform duration-300 ease-out"
+            >
+              <Image
+                src="/borderRectangle.svg"
+                alt="Aurum background"
+                width={1080}
+                height={1080}
+                objectFit="cover"
+                priority
+                className="h-[40vh] translate-y-[-10%] lg:translate-y-0 lg:h-[90vh]"
+              />
+            </div>
+          </section>
         </div>
 
         <div
@@ -328,7 +331,10 @@ export default function Home() {
           <aside className="grid md:hidden grid-cols-4 gap-2 w-full">
             {mobileArr.map((el, idx) =>
               el.num === 0 ? (
-                <div key={idx} className="pointer-events-none  aspect-square"></div>
+                <div
+                  key={idx}
+                  className="pointer-events-none  aspect-square"
+                ></div>
               ) : el.link ? (
                 <a
                   href={el.link}
@@ -513,12 +519,40 @@ export default function Home() {
           }
         `}</style>
       </main>
-      {isModalOpen && <div onClick={() => setIsModalOpen(false)} className='fixed top-0 left-0 w-full h-full flex flex-col z-[100] items-center justify-center backdrop-blur-lg'>
-            <div className='px-11 py-7 rounded-xl bg-[#00000080] font-semibold text-lg relative'>
-              <p>Coming soon //</p>
-              <button className='absolute top-2 right-2 rounded-full min-h-5 min-w-5 leading-none flex items-center justify-center bg-[#904848cc] text-white hover:bg-[#d05959cc]'>-</button>
-            </div>
-      </div>}
+      {isModalOpen && (
+        <div
+          onClick={() => setIsModalOpen(false)}
+          className="fixed top-0 left-0 w-full h-full flex flex-col z-[100] items-center justify-center backdrop-blur-lg"
+        >
+          <div className="px-11 py-7 w-[230px] h-[88px] rounded-2xl bg-[#00000080] font-semibold text-lg relative">
+            <Image
+              src="/modalBorder.svg"
+              alt="Aurum background"
+              layout="fill"
+              objectFit="cover"
+              priority
+              className="w-full absolute h-full pointer-events-none"
+            />
+            <p className="border-b-4 border-b-red-500">OPENING SOON</p>
+            <button className="absolute top-2 right-2 rounded-full min-h-5 cursor-pointer min-w-5 leading-none flex font-medium items-center justify-center ease-linear duration-200 transition-all bg-[#904848cc] hover:scale-110 text-white hover:bg-red-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
