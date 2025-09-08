@@ -4,7 +4,7 @@ import React from "react";
 const Products = () => {
   return (
     <div className="flex flex-col justify-center items-center px-10 text-white">
-      <h2 className="text-4xl py-10">Core <span className="border-b border-red-500">Products</span></h2>
+      <h2 className="text-4xl py-10">Core <span className="border-b-4 border-[#FF6563]">Products</span></h2>
       <div className="grid grid-cols-3 gap-10">
         {/* Первый продукт */}
         <div className="flex items-center flex-col gap-4">
@@ -163,16 +163,16 @@ const Products = () => {
         }
         
         .animate-float {
-          animation: float 8s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
         }
         
         .animate-float-delayed {
-          animation: float 10s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
           animation-delay: 1s;
         }
         
         .animate-float-more-delayed {
-          animation: float 9s ease-in-out infinite;
+          animation: float 8s ease-in-out infinite;
           animation-delay: 2s;
         }
       `}</style>

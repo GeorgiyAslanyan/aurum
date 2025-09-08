@@ -1,8 +1,10 @@
 "use client";
 
 import Flow from "@/components/Flow";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Join from "@/components/Join";
+import Navbar from "@/components/Navbar";
 import Products from "@/components/Products";
 import Roadmap from "@/components/Roadmap";
 import Image from "next/image";
@@ -21,11 +23,13 @@ export default function Home() {
         ref={mainRef}
         className="bg-gradient-to-b from-[#262626] to-[#261616] text-white overflow-hidden font-mono flex flex-col gap-5"
       >
-        <Hero isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} mainRef={mainRef} elementsRef={elementsRef}/>
+        <Navbar isModalOpen={isModalOpen}  setIsModalOpen={setIsModalOpen} />
+        <Hero mainRef={mainRef} elementsRef={elementsRef}/>
         {/* <Products />
         <Flow />
         <Roadmap />
-        <Join /> */}
+        <Join mainRef={mainRef} elementsRef={elementsRef}/>
+        <Footer /> */}
       </main>
       {isModalOpen && (
         <div
@@ -41,8 +45,8 @@ export default function Home() {
               priority
               className="w-full absolute h-full pointer-events-none"
             />
-            <p className="border-b-4 border-b-red-500">OPENING SOON</p>
-            <button className="absolute top-2 right-2 rounded-full min-h-5 cursor-pointer min-w-5 leading-none flex font-medium items-center justify-center ease-linear duration-200 transition-all bg-[#904848cc] hover:scale-110 text-white hover:bg-red-500">
+            <p className="border-b-4 border-b-[#FF6563]">OPENING SOON</p>
+            <button className="absolute top-2 right-2 rounded-full min-h-5 cursor-pointer min-w-5 leading-none flex font-medium items-center justify-center ease-linear duration-200 transition-all bg-[#904848cc] hover:scale-110 text-white hover:bg-[#FF6563]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

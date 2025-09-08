@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react'
 import Head from "next/head";
 import { ArrowUpRight } from "lucide-react";
 import Image from 'next/image';
+import Navbar from './Navbar';
 
 
-const Hero = ({mainRef, elementsRef, isModalOpen, setIsModalOpen}) => {
+const Hero = ({mainRef, elementsRef}) => {
     const arr = [
         { num: 0, sym: "", isBlured: true },
         { num: 0, sym: "", isBlured: true },
@@ -159,52 +160,38 @@ const Hero = ({mainRef, elementsRef, isModalOpen, setIsModalOpen}) => {
       
   return (
     <div className='min-h-screen relative '>
+      <div
+              className=" absolute top-6 left-6 justify-center lg:justify-start lg:top-20 z-[40] transition-transform duration-300 ease-out"
+            >
+              <Image
+                src="/logo.png"
+                alt="Aurum logo"
+                width={239}
+                height={35}
+                objectFit="cover"
+                priority
+                className="w-[150px] lg:w-[239px]"
+              />
+            </div>
     <div
           ref={(el) => (elementsRef.current[0] = el)}
           className="absolute w-full h-full pointer-events-none "
         >
           <Image
-            src="/background.svg"
+            src="/background.png"
             alt="Aurum background"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="transition-transform duration-300 ease-out"
+            width={1920}
+            height={1080}
+            className="transition-transform w-screen duration-300 ease-out"
           />
         </div>
-
-        <div className="h-[80vh]  lg:h-full">
-          <div className="absolute top-6 right-6 z-40 hidden lg:flex">
-            <div
-              onClick={() => setIsModalOpen(true)}
-              className="cursor-pointer hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
-            >
-              GO TO APP
-            </div>
-          </div>
-          
-            
-
-          <div
-            ref={(el) => (elementsRef.current[1] = el)}
-            className="absolute w-screen lg:w-fit lg:left-12 flex  justify-center lg:justify-start top-8 lg:top-20 z-[100] transition-transform duration-300 ease-out"
-          >
-            <Image
-              src="/logo.png"
-              alt="Aurum logo"
-              width={239}
-              height={35}
-              objectFit="cover"
-              priority
-              className="h-full w-[150px] lg:w-[239px]"
-            />
-          </div>
+        <div className="h-[80vh] lg:h-full">
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="absolute hidden lg:flex pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[99] animate-fade-in transition-transform duration-300 ease-out"
+            className="absolute hidden lg:flex pointer-events-none pl-10 py-10  h-[80vh] content-center lg:h-screen w-screen z-[30] animate-fade-in transition-transform duration-300 ease-out"
           >
             <Image
-              src="/grid.svg"
+              src="/grid.png"
               alt="Aurum grid"
               width={300}
               height={900}
@@ -223,72 +210,6 @@ const Hero = ({mainRef, elementsRef, isModalOpen, setIsModalOpen}) => {
               <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
             </div>
            
-
-            <div
-              ref={(el) => (elementsRef.current[4] = el)}
-              className="translate-x-[190%] hidden lg:flex  group hover:scale-110 relative  transition-all translate-y-[-190%] z-10 items-center justify-center  duration-300 ease-out"
-            >
-              <a
-                href="https://t.me/AurumXLabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute text-xl transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
-              >
-                JOIN US
-              </a>
-              <Image
-                src="/join.svg"
-                alt="Aurum background"
-                width={273}
-                height={154}
-                objectFit="cover"
-                priority
-                className="w-44"
-              />
-            </div>
-
-            <div
-              ref={(el) => (elementsRef.current[4] = el)}
-              className="right-8 top-25 flex lg:hidden group hover:scale-110 lg:relative transition-all absolute z-50 items-center justify-center  duration-300 ease-out"
-            >
-              <div
-                onClick={() => setIsModalOpen(true)}
-                className="cursor-pointer text-xs absolute right-2 -top-5  hover:border-b-4 border-b-red-500 hover:scale-110 transition-all duration-300 ease-out"
-              >
-                GO TO APP
-              </div>
-              <Image
-                src="/mobile/app.svg"
-                alt="Aurum background"
-                width={100}
-                height={49}
-                objectFit="cover"
-                priority
-                className="w-24"
-              />
-            </div>
-            <div
-              ref={(el) => (elementsRef.current[4] = el)}
-              className="translate-x-[-15%] translate-y-[110%] min-[380]:translate-y-[130%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
-            >
-              <a
-                href="https://t.me/AurumXLabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute text-xl bottom-2 right-2 transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
-              >
-                JOIN US
-              </a>
-              <Image
-                src="/mobile/join.svg"
-                alt="Aurum background"
-                width={212}
-                height={130}
-                objectFit="cover"
-                priority
-                className="w-44"
-              />
-            </div>
 
             <div
               ref={(el) => (elementsRef.current[5] = el)}
@@ -310,13 +231,12 @@ const Hero = ({mainRef, elementsRef, isModalOpen, setIsModalOpen}) => {
               className="pointer-events-none absolute transition-transform duration-300 ease-out"
             >
               <Image
-                src="/rect.svg"
+                src="/rect.png"
                 alt="Aurum background"
                 width={1080}
                 height={1080}
-                objectFit="cover"
                 priority
-                className="h-[40vh] translate-y-[-10%] hidden lg:flex lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
+                className="h-[40vh] object-contain translate-y-[-10%] hidden lg:flex lg:translate-y-0 lg:h-[90vh] "
               />
             </div>
 
