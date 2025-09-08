@@ -210,6 +210,28 @@ const Hero = ({mainRef, elementsRef}) => {
               <h2 className="translate-x-5 lg:translate-x-20">Liquid.</h2>
             </div>
            
+           <div
+              ref={(el) => (elementsRef.current[4] = el)}
+              className="translate-x-[190%] hidden lg:flex  group hover:scale-110 relative  transition-all translate-y-[-190%] z-10 items-center justify-center  duration-300 ease-out"
+            >
+              <a
+                href="https://t.me/AurumXLabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute text-xl transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+              >
+                JOIN US
+              </a>
+              <Image
+                src="/join.svg"
+                alt="Aurum background"
+                width={273}
+                height={154}
+                objectFit="cover"
+                priority
+                className="w-44"
+              />
+            </div>
 
             <div
               ref={(el) => (elementsRef.current[5] = el)}
@@ -225,7 +247,28 @@ const Hero = ({mainRef, elementsRef}) => {
                 className="w-full translate-y-[-10%] lg:translate-y-0 lg:h-[90vh] brightness-110 contrast-125 grayscale-25"
               />
             </div>
-
+<div
+              ref={(el) => (elementsRef.current[4] = el)}
+              className="translate-x-[-15%] translate-y-[110%] min-[380]:translate-y-[130%] flex lg:hidden  group hover:scale-110 relative  transition-all  z-50 items-center justify-center  duration-300 ease-out"
+            >
+              <a
+                href="https://t.me/AurumXLabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute text-xl bottom-2 right-2 transition-all ease-linear duration-300 group-hover:border-b-4 border-b-red-500 group-hover:scale-110"
+              >
+                JOIN US
+              </a>
+              <Image
+                src="/mobile/join.svg"
+                alt="Aurum background"
+                width={212}
+                height={130}
+                objectFit="cover"
+                priority
+                className="w-44"
+              />
+            </div>
             <div
               ref={(el) => (elementsRef.current[5] = el)}
               className="pointer-events-none absolute transition-transform duration-300 ease-out"
