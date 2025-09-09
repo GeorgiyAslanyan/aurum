@@ -342,7 +342,7 @@ export default function Home() {
 
         <div
           ref={(el) => (elementsRef.current[7] = el)}
-          className="absolute flex items-center flex-col right-4 lg:right-14 pl-4 w-[calc(100%-1rem)] md:w-fit bottom-10 z-30 transition-transform duration-300 ease-out"
+          className="absolute flex items-center flex-col right-4 lg:right-14 pl-4 w-[calc(100%-1rem)] md:w-fit bottom-14 lg:bottom-10 z-30 transition-transform duration-300 ease-out"
         >
           <aside className="grid md:hidden grid-cols-4 gap-2 w-full max-w-[283px] min-[380]:max-w-[498px] ">
             {mobileArr.map((el, idx) =>
