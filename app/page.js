@@ -68,7 +68,8 @@ export default function Home() {
           className="w-3/4 "
         />
       ),
-      isBlured: false,
+          isBlured: false,
+          link: "https://aurumx.gitbook.io/aurumx-labs"
     },
   ];
 
@@ -125,6 +126,7 @@ export default function Home() {
         />
       ),
       isBlured: false,
+      link: "https://aurumx.gitbook.io/aurumx-labs"
     },
   ];
 
